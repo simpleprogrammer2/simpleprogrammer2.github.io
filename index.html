@@ -1,208 +1,131 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal Portfolio Website">
+    <meta name="author" content="Archana Sevak">
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <link rel="stylesheet" type="text/css" href="stylesheets/responsive-menu.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="stylesheets/styles.css" media="screen">
+    <title>Archana Sevak - Personal Portfolio</title>
 
+    <!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+    <!-- Custom Fonts -->
 
-    <title>Archana Sevak</title>
-    <style type="text/css">
-    .main-header{
-      text-align: center;
-    }
-    header {
-    background-image:url('http://bbsimg.ngfiles.com/14/13436000/ngbbs46aa9f92d6e5d.gif');
-    background-repeat: repeat-x;
-    width: 100%;
-    height: 20px;
-    position: absolute;
-}
-    </style>
-  </head>
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/index2.css" rel="stylesheet">
 
-  <body>
+     
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+   <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i> <span class="light">Archana</span> Sevak
+                </a>
+            </div>
 
-    <header class="main-header" role="banner">
-
-      <div class="container">
-        <h1>Archana Sevak</h1> 
-        <h2>Software Developer</h2>
-        <h2>Experties in Java,PHP,MySQL,ASP.NET,MS SQL,Oracle</h2>
-
-        <section id="downloads">
-          <a href="https://github.com/ajsevak/archanasevak" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-       <!-- Apply Responsive Menu CSS -->
-    <link href="stylesheets/responsive-menu.css" rel="stylesheet">
-
-    <!-- Unessential CSS - Just here to make this sample page prettier -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,700' rel='stylesheet' type='text/css'>
-    <link href="stylesheets/styles.css" rel="stylesheet">
-
-    <!-- Load modernizr or html5shiv -->
-    <script src="//cdn.jsdelivr.net/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
-    <script>window.modernizr || document.write('<script src="../lib/modernizr/modernizr-custom.js"><\/script>')</script>
-    <!--<script src="../lib/html5shiv/html5shiv.js"></script>-->
-
-    <!-- Load jQuery -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../lib/jquery-legacy/jquery.js"><\/script>')</script>
-
-    <!-- Load Responsive Menu -->
-    <script src="javascripts/responsive-menu.js" type="text/javascript"></script>
-
-    <!-- Setup Responsive Menu -->
-    <script>
-        jQuery(function ($) {
-            var menu = $('.rm-nav').rMenu({
-
-                // Optional Settings
-
-                /**
-                 * Minimum width for expanded layout in pixels - String
-                 * The media query in css file should be changed to match this
-                 * Must be in pixels and include px units if not using Modernizr.
-                 * @default '769px'
-                 */
-                minWidth: '960px',
-
-                /**
-                 * The opening and closing speed of the menus in milliseconds
-                 * @default 400
-                 */
-                //transitionSpeed: 400,
-
-                /**
-                 * The jQuery easing function - used with jQuery transitions
-                 * @default 'swing'
-                 * @options 'swing', 'linear'
-                 */
-                jqueryEasing: 'swing',
-
-                /**
-                 * The CSS3 transitions easing function - used with CSS3 transitions
-                 * @default 'ease'
-                 */
-                //css3Easing: 'ease',
-
-                /**
-                 * Use button as toggle link - instead of text
-                 * @default true
-                 */
-                //toggleBtnBool: true,
-
-                /**
-                 * The Toggle Link selector
-                 * @default '.rm-toggle'
-                 */
-                //toggleSel: '.rm-toggle',
-
-
-                /**
-                 * The menu/sub-menu selector
-                 * @default 'ul'
-                 */
-                //menuSel: 'ul',
-
-                /**
-                 * The menu items selector
-                 * @default 'li'
-                 */
-                //menuItemsSel: 'li',
-
-                /**
-                 * Use CSS3 animation/transitions Boolean
-                 * @default true
-                 * Do not use animation/transitions: false
-                 */
-                //animateBool: false,
-
-                /**
-                 * Force GPU Acceleration Boolean
-                 * @default false
-                 * Do not force: false
-                 */
-                //accelerateBool: true,
-
-                /**
-                 * the setup complete callback function
-                 * @default 'false'
-                 */
-                //setupCallback: false,
-
-                /**
-                 * the tabindex start value - integer
-                 * @default 1
-                 */
-                //tabindexStart: 5,
-
-                /**
-                 * Use development mode - outputs information to console
-                 * @default false
-                 */
-                developmentMode: true
-
-            });
-        });
-    </script>
-
-</head>
-<body>
-
-<header>
-
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download">Portfolio</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+     <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">WebDesigns Studio</h1>
+                        <p class="intro-text">The most simple and elegant webpages
+                            <br>Created by Archana Sevak</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
-<div class="wrapper">
-    
 
-    <!-- START Responsive Menu HTML -->
-    <div class="rm-container">
-        <a class="rm-toggle rm-button rm-nojs" href="#">Menu</a>
+    <!-- About Section -->
+  
+  <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+               
+               <h2>Intro</h2>
+       <p>I am a Software Developer, currently working at General Motors, Detroit Michigan. I like motor city and driving fast cars. Coding is my another passion, I love to code in different programming languages.</p>
+                  <!--<a href="https://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+                <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
+                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>-->
+            </div>
+        </div>
+    </section>
+                   
 
-        <nav class="rm-nav rm-nojs rm-lighten">
-            <ul>
-                <li><a href="#">Home</a>
-                </li>
-                <li><a href="#">Experties</a>
-                    <ul>
-                        <li><a href="#">Eclipse</a></li>
-                        <li><a href="#">IntelliJ Idea</a></li>
-                        <li><a href="#">Visual Studio</a></li>
-                        <li><a href="#">SQL Management Studio</a></li>
-                        <li><a href="#">SQL Developer</a></li>
-                    </ul></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About Me</a></li>
-            </ul>
-        </nav>
-    </div><!-- .rm-container -->
-    <!-- End Responsive Menu HTML -->
-</div><!-- .wrapper -->
-    <div class="container">
-      <section id="main_content">
-        
-        <h3>
-
-<div>
-  <div>
-    <h1>Some Content</h1>
-  </div>
-</div>
-
-
-
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    
-  </body>
-</html>
+ 
+  <!-- Download Section -->
+    <section id="portfolio" class="content-section text-center">
+      
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>My Portfolio</h2>
+                    <p>You can see here my sample work and web designs created by me</p>
+                    <!--<a href="https://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Github Page</a>-->
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact Me</h2>
+                <p>Feel free to email me to provide some feedback on designs, give me suggestions for new templates and themes, or to just say hello!</p>
+                <p><a href="mailto:archana.sevak12@gmail.com">archana.sevak12@gmail.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/alina967" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/ajsevak" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/100937951400392287114" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                      <a href="https://www.linkedin.com/in/archanasevak" class="btn btn-default btn-lg"><i class="fa fa-Linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Archana Sevak - Freelance Developer</p>
+        </div>
+    </footer>
+</body>
