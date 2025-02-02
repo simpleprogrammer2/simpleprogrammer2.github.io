@@ -130,8 +130,14 @@ dt {
   font-weight: bold;
 }
 
-ul li {
-  list-style: none;
+ul.center {
+  list-style-type: none;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
 }
 
 ul li:before {
