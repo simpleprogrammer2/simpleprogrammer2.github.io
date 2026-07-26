@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archana Sevak | Backend & Distributed Systems Expert</title>
     <link rel="stylesheet" href="stylesheets/style.css">
-    <script src="config.js"></script>
+    <script src="config.js" defer></script>
 </head>
 <body>
     <header>
@@ -20,24 +20,26 @@
         </div>
     </main>
 
-    <!-- Appointment Widget (Toggleable) -->
     <section id="scheduler" style="display:none;">
         <h3>Schedule a Meeting</h3>
-        <!-- Google Calendar Appointment Scheduling -->
         <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2TnnzBmli7mHKC4ZH0H3BM0cg8v-rYayl5SWeYX8OykZksqm59JN0xB_hyfwAg1UZwhY463Jx0?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
     </section>
 
     <script>
-        // Logic to render active projects based on config.js
-        const grid = document.getElementById('project-grid');
-        config.projects.filter(p => p.active).forEach(p => {
-            grid.innerHTML += `<div class="card"><h3>${p.name}</h3><a href="${p.url}">View Project</a></div>`;
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('project-grid');
+            if (typeof config !== 'undefined') {
+                config.projects.filter(p => p.active).forEach(p => {
+                    grid.innerHTML += `<div class="card"><h3>${p.name}</h3><a href="${p.url}">View Project</a></div>`;
+                });
+                
+                if(config.features.showScheduler) {
+                    document.getElementById('scheduler').style.display = 'block';
+                }
+            } else {
+                console.error("Config not loaded!");
+            }
         });
-        
-        // Logic to apply feature toggles
-        if(config.features.showScheduler) {
-            document.getElementById('scheduler').style.display = 'block';
-        }
     </script>
 </body>
 </html>
