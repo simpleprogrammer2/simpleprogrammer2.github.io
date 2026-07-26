@@ -3,33 +3,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Personal Portfolio Website">
+    <meta name="description" content="Archana Sevak - Systems Architect & Tech Lead Portfolio">
     <meta name="author" content="Archana Sevak">
 
-    <title>Archana Sevak - Tech Lead</title>
-    <link rel="icon" type="image/x-icon" href="/images/apple-touch-icon.png">
+    <title>Archana Sevak | Systems Architect & Tech Lead</title>
+    <link rel="icon" type="image/x-icon" href="./images/apple-touch-icon.png">
 
     <!-- Bootstrap Core CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Custom Fonts -->
-
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="./stylesheets/index2.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/index2.css">
     <script id="__webwhizSdk__" data-chatbot-id="6829028b0ce5fcc58e160ea8" src="https://widget.webwhiz.ai/webwhiz-sdk.js"></script>
     <script src="theme-engine.js" defer></script>
-
 </head>
      
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <div style="position: fixed; top: 10px; right: 10px; z-index: 9999;">
-        <select id="theme-switcher">
-            <option value="theme-modern">Modern</option>
-            <option value="theme-matrix">Matrix</option>
-            <option value="theme-bliss">90s Bliss</option>
-        </select>
-    </div>
    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -37,13 +28,13 @@
                     Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i> <span class="light">Archana</span> Sevak
+                    <i class="fa fa-terminal"></i> <span class="light">Archana</span> Sevak
                 </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-items-aligned">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a href="#page-top"></a>
@@ -60,7 +51,13 @@
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
-
+                    <li class="theme-toggle-li">
+                        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
+                            <i class="fa fa-moon-o theme-icon-dark"></i>
+                            <i class="fa fa-sun-o theme-icon-light"></i>
+                            <span class="theme-toggle-text">Theme</span>
+                        </button>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -73,12 +70,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">WebDesigns Studio</h1>
-                        <p class="intro-text">The most simple and elegant webpages
-                            <br>Created by Archana Sevak</p>
-                        <img href="#about" class="btn-circle" src="./images/profile.jpg">
+                        <div class="tech-badge"><span>SYSTEMS ARCHITECT & TECH LEAD</span></div>
+                        <h1 class="brand-heading">Systems Architect Hub</h1>
+                        <p class="intro-text">Designing resilient microservices & high-scale cloud architecture
+                            <br><span class="author-sub">Engineered by Archana Sevak</span></p>
+                        <a href="#about" class="btn-circle page-scroll">
+                            <img src="./images/profile.jpg" alt="Archana Sevak" class="profile-img-btn">
                             <i class="fa fa-angle-double-down animated"></i>
-                        </img>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -103,72 +102,87 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>My Portfolio</h2>
-                    <p>Sample work and web designs created by me.</p>
+                    <h2>Portfolio & Projects</h2>
+                    <p>Sample interactive applications, system prototypes, and UI components.</p>
                 </div>
             </div>
-            <div class="row portfolio-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px;">
+            <div class="row portfolio-grid">
                 <!-- Project: Random Quote Generator -->
-                <div class="portfolio-item" style="flex: 0 0 300px;">
-                    <h3 class="item-title"><a href="https://codepen.io/ajsevak/pen/mjEpwK">Random Quote Generator</a></h3>
-                    <iframe src="https://codepen.io/ajsevak/full/mjEpwK/" frameborder="0" scrolling="no" style="width: 100%; height: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></iframe>
+                <div class="portfolio-item">
+                    <h3 class="item-title"><a href="https://codepen.io/ajsevak/pen/mjEpwK" target="_blank" rel="noopener">Random Quote Generator</a></h3>
+                    <iframe class="portfolio-iframe" src="https://codepen.io/ajsevak/full/mjEpwK/" frameborder="0" scrolling="no"></iframe>
                 </div>
 
                 <!-- Project: Scrolling Nav bar website -->
-                <div class="portfolio-item" style="flex: 0 0 300px;">
-                    <h3 class="item-title"><a href="https://codepen.io/ajsevak/pen/MbEjgJ">Scrolling Nav bar</a></h3>
-                    <iframe src="https://codepen.io/ajsevak/full/MbEjgJ/" frameborder="0" scrolling="no" style="width: 100%; height: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></iframe>
+                <div class="portfolio-item">
+                    <h3 class="item-title"><a href="https://codepen.io/ajsevak/pen/MbEjgJ" target="_blank" rel="noopener">Scrolling Nav Bar</a></h3>
+                    <iframe class="portfolio-iframe" src="https://codepen.io/ajsevak/full/MbEjgJ/" frameborder="0" scrolling="no"></iframe>
                 </div>
 
                 <!-- Project: Background Webpage -->
-                <div class="portfolio-item" style="flex: 0 0 300px;">
-                    <h3 class="item-title"><a href="https://codepen.io/ajsevak/pen/ZBJmqL">Background Webpage</a></h3>
-                    <iframe src="https://codepen.io/ajsevak/full/ZBJmqL/" frameborder="0" scrolling="no" style="width: 100%; height: 300px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></iframe>
+                <div class="portfolio-item">
+                    <h3 class="item-title"><a href="https://codepen.io/ajsevak/pen/ZBJmqL" target="_blank" rel="noopener">Background Webpage</a></h3>
+                    <iframe class="portfolio-iframe" src="https://codepen.io/ajsevak/full/ZBJmqL/" frameborder="0" scrolling="no"></iframe>
                 </div>
             </div>
             
-            <div class="row" style="margin-top: 40px;">
+            <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2001688439&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                    <div class="soundcloud-wrapper">
+                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2001688439&color=%2310b981&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
     <section id="experience" class="content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-               <h2>Senior Software Engineer</h2>
-                <p>Experienced backend developer with 10 years of expertise in designing large-scale, data-driven systems. Led the design of a robust micro-services architecture, improved database handling processes, and integrated machine learning models to enhance performance.</p>
-        
-                <h3 class="item-title">Skills</h3>
-                <ul style="list-style-type:none">
-                    <li><strong>Programming Languages:</strong> Python, GraphQL, Kotlin, Java, Shell Script</li>
-                    <li><strong>Database Management:</strong> Relational (Oracle SQL, DB2, MS SQL) and NoSQL databases</li>
-                    <li><strong>Software Architecture:</strong> Flask, Spring, Microservices Architecture</li>
-                    <li><strong>Design Principles:</strong> Object-oriented design principles, REST API design</li>
-                </ul>
-        
-                <h3 class="item-title">Experience</h3>
-        
-                <h4>Senior Software Engineer, CS Disco (March 2022 - Present)</h4>
-                <ul style="list-style-type:none">
-                    <li>Led the design and implementation of a microservices architecture for Data Ingest, improving efficiency by 30%.</li>
-                    <li>Developed backend components for Case Management and Document Review features, enhancing team productivity.</li>
-                    <li>Integrated machine learning models into existing applications, increasing AI adoption among customers.</li>
-                    <li>Reviewed pull requests, optimized code, and implemented reusable solutions for better maintainability.</li>
-                    <li>Supported CI/CD processes and mentored new team members.</li>
-                </ul>
-        
-                <h4>Software Engineer, General Motors (May 2013 - March 2022)</h4>
-                <ul style="list-style-type:none">
-                    <li>Designed application configuration integration with Kubernetes for automated deployments.</li>
-                    <li>Led the development of Azure B2C identity management software, working with architects to implement authentication and authorization for mobile apps.</li>
-                    <li>Developed RESTful APIs using Spring Boot and JPA, adhering to GDPR and PII compliance.</li>
-                    <li>Provided training materials and support for multiple teams on identity management solutions.</li>
-                </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Technical Leadership & Experience</h2>
+                    <p>Over a decade of engineering high-performance microservices, automated deployments, and enterprise backend systems.</p>
+            
+                    <div class="experience-card">
+                        <h3>Core Competencies</h3>
+                        <ul class="skills-badge-list">
+                            <li>Python</li>
+                            <li>Kotlin</li>
+                            <li>Java</li>
+                            <li>GraphQL</li>
+                            <li>Microservices</li>
+                            <li>Spring Boot</li>
+                            <li>Flask</li>
+                            <li>Kubernetes</li>
+                            <li>REST APIs</li>
+                            <li>PostgreSQL</li>
+                            <li>NoSQL</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-card">
+                        <h4>Senior Software Engineer | CS Disco</h4>
+                        <p class="text-muted" style="font-family: var(--font-mono); font-size: 14px;">March 2022 - Present</p>
+                        <ul>
+                            <li>Led the architecture and implementation of microservices for Data Ingest, increasing processing efficiency by 30%.</li>
+                            <li>Engineered robust backend components for Case Management and Document Review features.</li>
+                            <li>Integrated machine learning inference models into existing products, expanding AI adoption.</li>
+                            <li>Mentored software engineers, conducted code reviews, and enforced maintainable architectural patterns.</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-card">
+                        <h4>Software Engineer | General Motors</h4>
+                        <p class="text-muted" style="font-family: var(--font-mono); font-size: 14px;">May 2013 - March 2022</p>
+                        <ul>
+                            <li>Configured Kubernetes integration for automated cloud application deployments.</li>
+                            <li>Architected Azure B2C identity management solutions providing authentication for mobile clients.</li>
+                            <li>Developed RESTful APIs using Spring Boot and JPA with GDPR & PII compliance.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-
     </section>
  <!-- Contact Section -->
     <section id="contact" class="container content-section text-center">
